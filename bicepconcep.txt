@@ -1,0 +1,18 @@
+string → One text value ("Bangalore") with this one code we can deploy multiple sevices
+int → One number (5)
+bool → One true/false value (true)
+array → A list of values (["frontend", "backend"])
+
+
+object → A group of related values ({ sku: ..., kind: ... })
+example:
+        param vmSize string = 'Standard_B2s'
+        param adminUser string = 'azureuser'
+        param osType string = 'Windows'
+
+
+param vmConfig object = {
+  size: 'Standard_B2s'
+  adminUser: 'azureuser'
+  osType: 'Windows'
+}
