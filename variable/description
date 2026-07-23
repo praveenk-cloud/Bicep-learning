@@ -1,0 +1,33 @@
+Why use a variable?
+
+Imagine you have 5 resources:
+
+resource vm ...
+resource storage ...
+resource vnet ...
+resource nsg ...
+resource publicIP ...
+
+Without a variable:
+
+location: 'East US'
+location: 'East US'
+location: 'East US'
+location: 'East US'
+location: 'East US'
+
+If you later want West US, you must change it 5 times.
+
+With a variable:
+
+var location = 'East US'
+
+Then everywhere:
+
+location: location
+
+Now, to change the region, you only edit one line:
+
+var location = 'West US'
+
+Every resource automatically uses West US.
